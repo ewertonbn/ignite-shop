@@ -25,7 +25,7 @@ export default function Product({ product }: ProductProps) {
   const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] =
     useState(false)
 
-  async function handleByProduct() {
+  async function handleBuyProduct() {
     try {
       setIsCreatingCheckoutSession(true)
 
@@ -54,7 +54,7 @@ export default function Product({ product }: ProductProps) {
 
         <p>{product.description}</p>
 
-        <button onClick={handleByProduct} disabled={isCreatingCheckoutSession}>
+        <button onClick={handleBuyProduct} disabled={isCreatingCheckoutSession}>
           Comprar agora
         </button>
       </ProductDetails>
